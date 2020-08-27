@@ -1,4 +1,4 @@
-name: Maven Package and codecov
+name: twilio sms
 
 on:
   pull_request:
