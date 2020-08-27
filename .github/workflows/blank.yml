@@ -1,0 +1,25 @@
+name: Maven Package and codecov
+
+on:
+  pull_request:
+  push:
+    branches: 
+      - master
+      - develop
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 'Sending SMS Notification'
+      uses: twilio-labs/actions-sms@v1
+      with:
+        fromPhoneNumber: '+91(844)7184479'
+        toPhoneNumber: '+91(956)0317333'
+        message: 'Hello from Twilio'
+      env:
+        TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+        TWILIO_API_KEY: ${{ secrets.TWILIO_API_KEY }}
+        TWILIO_API_SECRET: ${{ secrets.TWILIO_API_SECRET }}
