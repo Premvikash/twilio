@@ -18,7 +18,7 @@ jobs:
       with:
         fromPhoneNumber: ${{ secrets.fromPhoneNumber }}
         toPhoneNumber: ${{ secrets.toPhoneNumber }}
-        message: 'Hello from Prem'
+        message: 'Hello from Prem..'
       env:
         TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
         TWILIO_API_KEY: ${{ secrets.TWILIO_API_KEY }}
